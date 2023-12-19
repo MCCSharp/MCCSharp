@@ -1,0 +1,98 @@
+namespace FlugzugMotorDelegate
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        { 
+            bool einmalTanken=false;
+            Flugzeug flugzeug = new() { OlTank=100};
+            flugzeug.OLZeigerEventHadler += flugzeug.ZeigTOlStatus!;
+            while (einmalTanken == false)
+            {
+                flugzeug.Fliegen();
+                if (flugzeug.OlTank == 0 && einmalTanken == false && flugzeug.Motor == false)
+                {
+                    flugzeug.OlTanken();          
+                    einmalTanken = true;
+                }
+            }
+            flugzeug.Fliegen();
+            flugzeug.OLZeigerEventHadler += flugzeug.ZeigTOlStatus!;
+        }
+    }
+
+    class Flugzeug
+    {
+        public event EventHandler? OLZeigerEventHadler;
+        public bool Motor { get; set; }
+        public int OlTank { get; set; }
+
+        public void StartFlugzug()
+        {
+            Motor = true;
+            Console.WriteLine("Motor ist an...");
+            Thread.Sleep(1000);
+        }
+
+        public void StopFlugzug()
+        {
+            Motor = false;
+            Console.WriteLine("Flugzeug landet...");
+            Thread.Sleep(1000);
+            Console.WriteLine("Motor ist aus...");
+            Thread.Sleep(1000);
+        }
+
+        public void Fliegen()
+        {
+            StartFlugzug();
+            if(Motor==true ) 
+            {
+                Console.WriteLine("Flugzug fliegt...");
+                OlVerbrauch();
+            }
+        }
+
+        public void OlVerbrauch()
+        {
+            while (OlTank > 0)
+            {
+                OlTank -= 10;
+                OLZeigerEventHadler?.Invoke(this, EventArgs.Empty);
+                Thread.Sleep(1000);
+            }
+            if (OlTank == 0 )
+            {
+                Motor=false;
+            }
+        }
+        public void OlTanken()
+        {
+            Random rnd = new Random();
+            OlTank += rnd.Next(5,10)*10;
+            Console.WriteLine("Ol wird getankt...");
+            OLZeigerEventHadler?.Invoke(this, EventArgs.Empty);
+            Thread.Sleep(1000);
+        }
+
+        public void ZeigTOlStatus(object sender,EventArgs e)
+        {
+            switch(OlTank)
+            {
+                case 0:
+                    Console.WriteLine("Kein Ol mehr, Motor wird ausgeschaltet");
+                    StopFlugzug();
+                    break;
+                case 20:
+                    Console.WriteLine("Niedrig Ol Druck");
+                    break;
+                case 50:
+                    Console.WriteLine("Halb Tank voll");
+                    break;
+                default:
+                    Console.WriteLine(OlTank);
+                    break;
+            }
+        }
+    }
+}
