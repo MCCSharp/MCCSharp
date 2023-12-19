@@ -1,0 +1,90 @@
+using System.Net.Http.Headers;
+
+namespace EventVideoRecorder
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Video video = new Video() { Titel = "Hot Shots" };
+            VideoDecorder vd = new VideoDecorder();//Publisher
+            MailService mailService = new MailService();//Subscriber
+            MessageService messegeService = new MessageService();
+
+            Dvd dvd = new Dvd() { Titel="Titanic"};
+            DvdDecoder dvdDecoder = new DvdDecoder();
+
+            // Registrierung der Subscrber für des Event
+            vd.VideoDecoder += mailService.OnDecoded;
+            dvdDecoder.DvdDecoded += mailService.OnDecoded;
+            vd.VideoDecoder += messegeService.OnDecoded;
+            dvdDecoder.DvdDecoded += messegeService.OnDecoded;
+            //Vidoe wird dekodiert und dass eringnis ausgelöst.
+            vd.Decoder(video);
+            dvdDecoder.Decoder(dvd);
+        }
+    }
+    public class Video
+    {
+        public string Titel { get; set; }
+    }
+
+    class VideoDecorder
+    {
+        public delegate void VideoDecoderEventHandler(object sender, EventArgs e);
+        public event VideoDecoderEventHandler? VideoDecoder;
+        public void Decoder(Video video)
+        {
+            Console.WriteLine($"Video {video.Titel} wird deokodiert.");
+            Thread.Sleep(2000);
+
+            OnViderDecoded();
+        }
+
+        private void OnViderDecoded()
+        {
+            if (VideoDecoder is not null) 
+            {
+                VideoDecoder.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+
+    class MailService
+    {
+        public void OnDecoded(object sender, EventArgs e)
+        {
+            Console.WriteLine("Mailservice: Email wird gesendet...");
+            Thread.Sleep(2000);
+        }
+    }
+
+    class Dvd
+    {
+        public string Titel { get; set; }
+    }
+
+    class DvdDecoder
+    {
+        //public delegate void DvdDecoderEventHandler(object sender, EventArgs e);
+        //public event DvdDecoderEventHandler? VideoDecoder;
+        public event EventHandler? DvdDecoded;
+
+        public void Decoder(Dvd dvd)
+        {
+            Console.WriteLine($"Dvd {dvd.Titel} wird deokodiert.");
+            Thread.Sleep(2000);
+            DvdDecoded?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    class MessageService
+    {
+        public void OnDecoded(object sender, EventArgs e)
+        {
+            Console.WriteLine("Messagerservice: eine textnachricht wird gessendet...");
+        }
+    }
+
+
+}
