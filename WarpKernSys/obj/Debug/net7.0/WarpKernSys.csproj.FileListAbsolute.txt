@@ -1,0 +1,14 @@
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\bin\Debug\net7.0\WarpKernSys.exe
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\bin\Debug\net7.0\WarpKernSys.deps.json
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\bin\Debug\net7.0\WarpKernSys.runtimeconfig.json
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\bin\Debug\net7.0\WarpKernSys.dll
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\bin\Debug\net7.0\WarpKernSys.pdb
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.AssemblyInfoInputs.cache
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.AssemblyInfo.cs
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.csproj.CoreCompileInputs.cache
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.dll
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\refint\WarpKernSys.dll
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.pdb
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\WarpKernSys.genruntimeconfig.cache
+C:\Users\Mike Canvot\Source\Repos\DelegateAufgabe\WarpKernSys\obj\Debug\net7.0\ref\WarpKernSys.dll
