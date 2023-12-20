@@ -1,0 +1,14 @@
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\bin\Debug\net7.0\WarenKorb.exe
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\bin\Debug\net7.0\WarenKorb.deps.json
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\bin\Debug\net7.0\WarenKorb.runtimeconfig.json
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\bin\Debug\net7.0\WarenKorb.dll
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\bin\Debug\net7.0\WarenKorb.pdb
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.AssemblyInfoInputs.cache
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.AssemblyInfo.cs
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.csproj.CoreCompileInputs.cache
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.dll
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\refint\WarenKorb.dll
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.pdb
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\WarenKorb.genruntimeconfig.cache
+C:\Users\Mike Canvot\Source\Repos\OOPUebung\WarenKorb\obj\Debug\net7.0\ref\WarenKorb.dll
